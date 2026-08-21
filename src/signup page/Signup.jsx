@@ -3,6 +3,8 @@ import { database } from "./configration/configer";
 import { ref, push } from "firebase/database";
 import Swal from "sweetalert2";
 import { motion, scale } from "framer-motion";
+import instamain from "../assets/instamain.webp";
+import instaLogo from "../assets/insta_logo-removebg-preview.png";
 
 function Signup() {
   const [data, setData] = useState({
@@ -57,7 +59,7 @@ function Signup() {
             close friend{" "}
           </span>
         </h1>
-        < motion.img whileHover={{ scale: 1.1 }}  src="src/assets/instamain.webp" width="500" alt="" />
+        < motion.img whileHover={{ scale: 1.1 }}  src={instamain} width="500" alt="" />
       </motion.div>
 
       < motion.div initial={{ x: 100 }} animate={{ x: 0 }} transition={{ duration: 0.9, type: "spring", stiffness: 200 }}  className=" flex  flex-column justify-center items-center text-center">
@@ -66,7 +68,7 @@ function Signup() {
           onSubmit={handleSummit}
         >
           <motion.img
-            src="src/assets/insta_logo-removebg-preview.png"
+            src={instaLogo}
             width={100}
             alt=""
             whileHover={{ scale: 1.1 }} 
